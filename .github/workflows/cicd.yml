@@ -34,6 +34,10 @@ jobs:
         run: npm run build
         working-directory: frontend/frontend
 
+      # List build output for debugging
+      - name: List build output
+        run: ls -l frontend/frontend/dist
+
       # Configure Git identity
       - name: Configure Git
         run: |
