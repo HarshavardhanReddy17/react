@@ -52,5 +52,6 @@ jobs:
           git config --global user.name "HarshavardhanReddy1"
           git config --global user.email "reddyharshavardhan400@gmail.com"
           npm install -g gh-pages
-          touch frontend/frontend/dist/.nojekyll
-          gh-pages -d frontend/frontend/dist -r https://x-access-token:${GITHUB_TOKEN}@github.com/HarshavardhanReddy17/react.git
+          cd frontend/frontend
+          touch dist/.nojekyll
+          gh-pages --dotfiles -d dist -r https://x-access-token:${GITHUB_TOKEN}@github.com/HarshavardhanReddy17/react.git
